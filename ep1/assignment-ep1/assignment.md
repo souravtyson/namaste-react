@@ -1,5 +1,7 @@
 ## 1. What is Emmet?
-    Emmet is a web development tool. It is used to do coding faster efficiently. It generates a code snippet based on some abbreviations. It is available in many IDEs like Visual Studio Code, Atom. It enhances the productivity of web developers by simplyfying the process of writing HTML and CSS code. 
+    Emmet is a web development tool. It is used to do coding faster efficiently. It generates a code 
+    snippet based on some abbreviations. It is available in many IDEs like Visual Studio Code, Atom. 
+    It enhances the productivity of web developers by simplyfying the process of writing HTML and CSS code. 
 ## 2. Difference between a library & framework?
     Library is considered to be some set of files which is used to do some specific work. Libraries are usually not responsible for the overall structure or flow of an application.
     Framework is a collection of libraries which tells that if you use it some set of functionality will be imported in your project even though you are not using it. It provides a structured way of building applications
