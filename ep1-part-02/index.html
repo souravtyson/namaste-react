@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+        
+    </div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script>
+      const h1 = React.createElement("h1", {}, "Hello World from React!"); 
+      // creating a h1 element using the React. Takes three argument 
+      //  1st - tag  name, 
+      //  2nd - {} - object , takes attribute of the tag 
+      //  3rd - Content to be shown within the tag. It can be plain text or can be combination of tags i.e siblings. when passing siblings you have to
+      //  pass each react element object in array.  
+      //  createElement returns reactelement object. this doesn't return html tag.
+      const root = ReactDOM.createRoot(document.getElementById("root")); // creating the root element using react dom.
+      root.render(h1); 
+      // append my child element to react root element. render is used to convert the ReactElement(object) to browser understandable html.
+    //   replaced the content or root. its not actually rendering.
+    </script>
+  </body>
+</html>
