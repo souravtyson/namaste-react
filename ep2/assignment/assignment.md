@@ -42,7 +42,7 @@ npm install react
 devDependencies - these are those dependency that is required while building my project. it actually helps 
 in building project or makes my life easy while doing development. these dependency are not shipped to the production build. 
 
-npm install --save-dev parcel
+npm install -D parcel
 
 ## What is `Tree Shaking`?
 
