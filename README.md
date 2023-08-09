@@ -216,7 +216,7 @@ you to avoid using features that are not supported by older browsers.
         - type="module" - This indicates that the script is a module, allowing you to use ES6 module syntax to import/export code
 
 
-### 4. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX
+### 4. {TitleComponent} vs {`<TitleComponent />`} vs {`<TitleComponent></TitleComponent>`} in JSX
 ```
     {TitleComponent} - this tells that whatever is inside this is considered to be a javascript expression and it will get evaluated.
                        you can assign some variable inside {} to extract the value.
