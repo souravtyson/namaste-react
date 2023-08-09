@@ -225,3 +225,113 @@ you to avoid using features that are not supported by older browsers.
     {<TitleComponent></TitleComponent>} - this is similar to `{<TitleComponent />}`. We can write it like this.
     { TitleComponent() } - this is calling the `TitleComponent` and it will return jsx. so the o/p of it is same o/p as {<TitleComponent />}.
 ```
+### 5. Create a nested header element using React.createElement(h1,h2,h3 inside div with class "title")
+
+```
+    const element = React.createElement("div", {}, [
+            React.createElement("h1", { class: "title"}, "this is h1 tag"),
+            React.createElement("h2", {class: "title"}, "this is h2 tag"),
+            React.createElement("h3", {class: "title"}, "this is h3 element")
+        ])
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(element)
+```
+
+### 6. Create same element using JSX.
+
+```
+    const elem = <div>
+      <h1 className="title">this is h1 tag</h1>
+      <h2 className="title">this is h2 tag</h2>
+      <h3 className="title">this is h3 tag</h3>
+    </div>
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(elem)
+```
+### 7. Create a functional componentof the same with JSX. Pass attributes into the tag in JSX.
+
+```
+    const Elem = ({id}) => {
+      return (
+        <div>
+          <h1 className="title">this is h1 tag {id}</h1>
+          <h2 className="title">this is h2 tag {id}</h2>
+          <h3 className="title">this is h3 tag {id}</h3>
+        </div> 
+      )
+    }
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+    root.render(<Elem id="2"/>)
+
+```
+
+### 8. Composition of Component(Add a component inside another)
+
+```
+const Child = () => {
+  return (
+    <div>
+      <h3>Inside child component</h3>
+    </div>
+  )
+}
+
+const Parent = () => {
+  return(
+    <div>
+      <p>This is component composition example</p>
+      {Child()}
+    </div>
+  )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<Parent/>)
+
+```
+
+### 9. Create a Header Component from scratch using Functional Components with JSX
+        - Add a logo on left
+        - Add a search bar in middle
+        - Add user icon on right
+        - Add CSS to make it look nice
+
+```
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.search-align {
+    padding: 58px;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    padding: 25px;
+}
+
+const Header = () => {
+    return (<div className="container">
+        <div className="logo-container">
+            <img className="logo" alt="logo" src="https://previews.123rf.com/images/miracel123/miracel1231801/miracel123180100797/94312688-food-delivery-logo.jpg" />
+        </div>
+        <div className="search-align">
+            Search: <input type="text" placeholder="Search"/>
+        </div>
+        <div>
+            <img className="profile" alt="logo" src="https://www.citypng.com/public/uploads/preview/white-user-member-guest-icon-png-image-31634946729lnhivlto5f.png" />
+        </div>
+    </div>)
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<Header />)
+```
