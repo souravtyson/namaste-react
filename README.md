@@ -1,12 +1,12 @@
 # namaste-react
 
-- Episode 1
+## Episode 1
 
-## 1. What is Emmet?
+### 1. What is Emmet?
     Emmet is a web development tool. It is used to do coding faster efficiently. It generates a code 
     snippet based on some abbreviations. It is available in many IDEs like Visual Studio Code, Atom. 
     It enhances the productivity of web developers by simplyfying the process of writing HTML and CSS code. 
-## 2. Difference between a library & framework?
+### 2. Difference between a library & framework?
     
     Library is considered to be some set of files which is used to do some specific work. Libraries 
     are usually not responsible for the overall structure or flow of an application.
@@ -15,33 +15,33 @@
     will be imported in your project even though you are not using it. It provides a structured way 
     of building applications
 
-## 3. What is CDN? Why do we use it?
+### 3. What is CDN? Why do we use it?
     Content Delivery Network(CDN) is used to serve the contents on internet fastly. We use it to serve 
     some static files from CDN server to the client browser.Because it is fast the loading of static content 
     will be quick. It is located in different geographic locations. CDNs are optimized to handle high traffic
     loads and provide better scalability and reliability. As user access some page then CDN closest to them 
     will serve the static files.
-## 4. Why is React known as React?
+### 4. Why is React known as React?
     React is known as react because it is reactive in nature. The term "reactive" refers to the ability of 
     a program to react or respond to changes in its environment. The name "React" reflects the library's fundamental 
     principle of reacting to changes in data and efficiently updating the UI
-## 5. What is cross-origin in the script tag?
+### 5. What is cross-origin in the script tag?
     The crossorigin attribute in script tags specifies the cross-origin policy for the script. The cross-origin 
     policy determines how the browser handles requests for the script from other domains. The crossorigin 
     attribute is only relevant when the script is retrieved from a third-party server. If the script is 
     retrieved from the same server as the page, the crossorigin attribute will have no effect. 
-## 6. What is difference between React and ReactDOM?
+### 6. What is difference between React and ReactDOM?
     React and ReactDOM are two different JavaScript libraries that are used together to create React 
     applications. React is responsible for creating the UI components, while ReactDOM is responsible 
     for rendering those components to the DOM. ReactDOM act as a bridge between React and browser's DOM.
-## 7. What is difference between react.development.js and react.production.js files via CDN?
+### 7. What is difference between react.development.js and react.production.js files via CDN?
     
     react.development.js - is used in development environment. this is not minified. in this easy to 
     debug and develop application. features wise - Source maps, warnings, hot reloading
     
     react.production.js - is used in production environment. this is minified file. optimized for performance.
 
-## 8. What are async and defer? 
+### 8. What are async and defer? 
     
     Async - async attribute in script tag doesn't confirms the order of execution of scripts. whenever
     html parsing of html file happens in browser, then fetching or downloading of script file also 
@@ -53,23 +53,23 @@
     i.e. parallely. The execution of script file will happen only when html parsing gets completed.
 
 
-- Episode 2
+## Episode 2
 
-## What is `NPM`?
+### 1. What is `NPM`?
 
 npm is used to download different javascript modules/packages present in the npm repository. It is a 
 command used to run from client box to download different packages or modules in there project.
 So people call it `node package manager` but in npm documentation the full form of npm is never mentioned.
 npm allows to update, install and manage javascript packages
 
-## What is Parcel/Webpack? Why do we need it?
+### 2. What is Parcel/Webpack? Why do we need it?
 
 Parcel or Webpack is javascript package that works as a bundler for javascript framework like 
 react js or vue or andular. It handles many other features like transpiling of code, minification 
 of js files. They provide cross browser support of ui framework. It bundles CSS or images into 
 one single js files. This file is then loaded by browser when your web page is opened. 
 
-## What is `.parcel-cache`
+### 3. What is `.parcel-cache`
 
 .parcel-cache is a hidden folder that gets generated when we run parcel for building or development.
 This folder contains information about the files that have been bundled, dependencies that have been resolved
@@ -85,12 +85,12 @@ need have already been built. If they have, Parcel will simply load the files fr
 can save a lot of time.
 
 
-## What is `npx`?
+### 4. What is `npx`?
 
 `npx` is a command-line tool that allows you to run Node.js packages without having to install them globally. This can be helpful for running one-off commands or for trying out new packages without cluttering up your system with unnecessary dependencies
 
 
-## what is difference between `dependencies` and `devDependencies`
+### 5. what is difference between `dependencies` and `devDependencies`
 
 dependencies - these are those dependency that is required to run my project if i deployed it in production.
 
@@ -101,7 +101,7 @@ in building project or makes my life easy while doing development. these depende
 
 npm install -D parcel
 
-## What is `Tree Shaking`?
+### 6. What is `Tree Shaking`?
 
 Tree shaking is a technique used to remove unused code from JavaScript bundles. This can improve the 
 performance of your application by reducing the size of the bundle.
@@ -110,14 +110,14 @@ This code is then removed from the bundle, which can improve the performance of 
 This is done by bundler like webpack/ parcel
 
 
-## What is `Hot Module Replacement`?
+### 7. What is `Hot Module Replacement`?
 
 Hot module replacement is reflecting of cureently made changes in code to my dev server. While doing 
 development. if you made any changes in the code it will reflect that changes immediately to dev server
 without any restarting of server required. 
 
 
-## List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
+### 8. List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words.
 
 1. hot module replacement
 2. zero configuration
@@ -138,7 +138,7 @@ supports minification by default
 
 
 
-## What is `.gitignore`? What should we add and not add into it?
+### 9. What is `.gitignore`? What should we add and not add into it?
 
 A .gitignore file is a text file that tells git which files and directories should be ignored 
 when tracking changes in a project. This can be helpful for excluding files that are not needed 
@@ -153,7 +153,7 @@ should not be pushed to the git. so it should be added in gitignore file because
 regenerated while building.
 
 
-## What is the difference between `package.json` and `package-lock.json`
+### 10. What is the difference between `package.json` and `package-lock.json`
 
 The package.json file is a manifest file that describes your project's dependencies. It 
 lists the packages that your project depends on, as well as their versions. The package.json 
@@ -165,14 +165,14 @@ always uses the same versions of the packages, even if the versions of the packa
 in the registry.
 
 
-## Why should i not modify `package-lock.json`
+### 11. Why should i not modify `package-lock.json`
 
 because it ensures that your project always uses the same versions of the packages, even if 
 the versions of the packages change in the registry.
 
 
 
-## What is `node_modules`? Is it a good idea to push that on git?
+### 12. What is `node_modules`? Is it a good idea to push that on git?
 
 
 The node_modules folder is a directory that contains all of the JavaScript modules that are 
@@ -180,13 +180,13 @@ installed in your project. These modules are used by your project to provide fun
 
 No you should not push node_modules to git repository.
 
-## What is the `dist` folder?
+### 13. What is the `dist` folder?
 
 dist folder is the folder generated by parcel when running or building  the application.
 this contains all bundled files with images being compressed or css being added into the js files.
 
 
-## What is `browserlists`? 
+### 14. What is `browserlists`? 
 
 A browserlist is a file that specifies which browsers your project should support. This is 
 important because it allows you to target specific browsers with your code, and it can help
@@ -194,8 +194,34 @@ you to avoid using features that are not supported by older browsers.
 
 
 
+### Read about different bundlers: vite, webpack, parcel.
+### Read about: ^ - caret and ~ - tilda
+### Read about Script types in html(MDN Docs)
 
 
-## Read about different bundlers: vite, webpack, parcel.
-## Read about: ^ - caret and ~ - tilda
-## Read about Script types in html(MDN Docs)
+## Episode 3
+
+### 1. What is JSX?
+    JSX stands for javascript XML. It is XML/HTML like syntax. JSX (JavaScript XML) is a syntax extension for JavaScript that allows you to write HTML-like code within your JavaScript code.
+
+### 2. Superpowers of JSX
+    - JSX allows you to define and render React components using a syntax that looks similar to HTML tags.
+    - You can embed JavaScript expressions within JSX using curly braces {}. This allows you to dynamically generate content.
+    - JSX supports conditional rendering using JavaScript's conditional statements or ternary operators.
+
+### 3. Role of type attribute in script tag? What options can i use there?
+    The type attribute in the <script> tag specifies the type of scripting language used in the script.
+        - In HTML5, JavaScript is the default scripting language. If you omit the type attribute, the browser assumes the content is JavaScript.
+            ex - <script></script> // <script type="text/javascript"></script>
+        - type="module" - This indicates that the script is a module, allowing you to use ES6 module syntax to import/export code
+
+
+### 4. {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX
+```
+    {TitleComponent} - this tells that whatever is inside this is considered to be a javascript expression and it will get evaluated.
+                       you can assign some variable inside {} to extract the value.
+    {<TitleComponent />} - this tells the component returning the jsx value will be evaluated. so the `TitleComponent` component is function 
+                        which will return jsx. We define component within < />.
+    {<TitleComponent></TitleComponent>} - this is similar to `{<TitleComponent />}`. We can write it like this.
+    { TitleComponent() } - this is calling the `TitleComponent` and it will return jsx. so the o/p of it is same o/p as {<TitleComponent />}.
+```
