@@ -292,10 +292,10 @@ root.render(<Parent/>)
 ```
 
 ### 9. Create a Header Component from scratch using Functional Components with JSX
-        * Add a logo on left
-        * Add a search bar in middle
-        * Add user icon on right
-        * Add CSS to make it look nice
+* Add a logo on left
+* Add a search bar in middle
+* Add user icon on right
+* Add CSS to make it look nice
 
 ```
 .container {
