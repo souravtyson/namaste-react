@@ -292,10 +292,10 @@ root.render(<Parent/>)
 ```
 
 ### 9. Create a Header Component from scratch using Functional Components with JSX
-* Add a logo on left
-* Add a search bar in middle
-* Add user icon on right
-* Add CSS to make it look nice
+        * Add a logo on left
+        * Add a search bar in middle
+        * Add user icon on right
+        * Add CSS to make it look nice
 
 ```
 .container {
@@ -335,3 +335,68 @@ const Header = () => {
 
 ReactDOM.createRoot(document.getElementById("root")).render(<Header />)
 ```
+
+## Episode 4
+
+### Is JSX mandatory for React?
+No JSX is not mandatory for writing code in React. But the kind of flexibility it gives in writing code is what makes JSX favourite for developers.
+
+### Is ES6 mandatory for React?
+Yes we can use React without ES6. So to make it work we to use React.createElement() to make it work.
+
+### {TitleComponent} vs {<TitleComponent />} vs {<TitleComponent></TitleComponent>} in JSX
+```
+    {TitleComponent} - this tells that whatever is inside this is considered to be a javascript expression and it will get evaluated.
+                       you can assign some variable inside {} to extract the value.
+    {<TitleComponent />} - this tells the component returning the jsx value will be evaluated. so the `TitleComponent` component is function 
+                        which will return jsx. We define component within < />.
+    {<TitleComponent></TitleComponent>} - this is similar to `{<TitleComponent />}`. We can write it like this.
+```
+
+### How can i write comments in JSX?
+    to comment the JSX code you have to wrap the code in `{/* */}` or `{ // }`
+
+
+### What is <React.Fragment></React.Fragment> and <></> ?
+    React component is suppose to return a single element tag. There can be a scenario that component doesn't return single but multiple element, 
+    so in that case we can use React.Fragment to return a single element even though there is multiple tags getting return from the component.
+
+    <></> is shorthand syntax for <React.Fragment></React.Fragment>
+
+
+### What is Virtual DOM ?
+    Virtual DOM is a concept that is used in react to render only the specific dom element without loading of the page. React keeps the copy of the virtual dom in memory. and whenever any change happens in the dom then the diffing algorithm gets applied to the virtual dom and the copy virtual dom where the changes is being reflected. using diffing algorithm we identify the difference in both the dom and that specific part gets rendered in the react.
+
+    When the state of the application changes, React updates the virtual DOM.
+    The virtual DOM is a lightweight copy of the real DOM. It is a tree of JavaScript objects that represents the structure of the UI.
+    React then uses a diffing algorithm to compare the previous and current virtual DOMs to determine which parts of the real DOM need to be updated.
+    React then updates the real DOM in the most efficient way possible.
+
+
+### What is Reconciliation in React ?
+    
+    Reconciliation is the process by which React updates the real DOM to match the virtual DOM. The virtual DOM is a lightweight in-memory representation of the real DOM
+
+### What is React Fiber ?
+    Fiber is the new reconciliation engine in React 16. Its main goal is to enable incremental rendering of the virtual DOM. React Fiber is a complete rewrite of React's reconciliation algorithm. SO it basically does the same thing but in better way. Significant improvements to the performance and responsiveness of React applications : 
+         1. Key features of React Fiber is incremental rendering. This means that React can split the rendering work into chunks and spread it out over multiple frames. This is important because it allows React to keep the UI responsive, even when there is a lot of rendering work to be done.
+         2. Another key feature of React Fiber is the ability to pause and resume rendering work. This is useful for things like animations and gestures. React Fiber can also prioritize different types of updates, which helps to ensure that the most important updates are applied first.
+
+### Why we need keys in React ? When do we need keys in React ? 
+    we needs keys in react to uniquely identify the elements. React uses this key to check which element is being modified, delete or added. 
+    Keys are especially important when rendering lists that change frequently, such as a to-do list or a chat feed. We need keys in React whenever we are rendering a list of elements. This includes:
+        
+        1. Arrays
+        2. Objects
+        3. Iterators
+        4. Fragments
+
+
+### Can we use index as keys in React ?
+    Yes we can use index as keys but it is not the recommended way to use index as keys while rendering the list of elements in react. For example, if we have a list of items and we use the index as the key, and then we reorder the list, React will have to re-render the entire list. This is because React will not be able to track which items have changed and which items have stayed the same.
+
+### What is props in React ? Ways to
+    Props on react is used to pass the value from one component to another component. we pass the value as attribute to the component tags and the attribute passed will be present as props of the component. 
+
+### What is a Config Driven UI ? 
+    Config driven ui is basically used for rendering the ui based on the api call. So the data to be shown in the ui will be access via rest api call.
