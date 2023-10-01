@@ -393,7 +393,7 @@ Yes we can use React without ES6. So to make it work we to use React.createEleme
 
 
 ### Can we use index as keys in React ?
-    ```Yes we can use index as keys but it is not the recommended way to use index as keys while rendering the list of elements in react. For example, if we have a list of items and we use the index as the key, and then we reorder the list, React will have to re-render the entire list. This is because React will not be able to track which items have changed and which items have stayed the same.```
+    Yes we can use index as keys but it is not the recommended way to use index as keys while rendering the list of elements in react. For example, if we have a list of items and we use the index as the key, and then we reorder the list, React will have to re-render the entire list. This is because React will not be able to track which items have changed and which items have stayed the same.
 
 ### What is props in React ? Ways to
     Props on react is used to pass the value from one component to another component. we pass the value as attribute to the component tags and the attribute passed will be present as props of the component. 
