@@ -2,16 +2,30 @@
     color: blue;
 }
 
-.container {
+.header-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
 }
 
 .logo {
     width: 120px;
     height: 120px;
 }
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-items > ul > li{
+    padding: 2px 1px 2px 20px;
+    font-size: 20px;
+}
+
+
 
 .search-align {
     padding: 58px;
@@ -21,4 +35,30 @@
     width: 60px;
     height: 60px;
     padding: 25px;
+}
+
+.restaurant-container .serach-restaurant {
+    margin: 5px 0px 5px 0px;
+}
+
+.restaurant-container .restaurant-list .card-container {
+    width: 200px;
+    height: 260px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3px;
+}
+
+.rest-img {
+    width: 100%;
+}
+
+.restaurant-list {
+    display: flex;
+}
+
+.card-container:hover {
+    cursor: pointer;
+    border: 1px solid black;
 }
