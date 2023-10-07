@@ -45,7 +45,7 @@ const Body = () => {
     return (
         <div className="restaurant-container">
             <div className="serach-restaurant">
-                <label for="search">Search : </label>
+                <label htmlFor="search">Search : </label>
                 <input type="text" id="search"/>
             </div>
 
