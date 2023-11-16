@@ -400,3 +400,58 @@ Yes we can use React without ES6. So to make it work we to use React.createEleme
 
 ### What is a Config Driven UI ? 
     Config driven ui is basically used for rendering the ui based on the api call. So the data to be shown in the ui will be access via rest api call.
+
+## Episode 5
+
+### What is the difference between Named export, Default export and * as export?
+
+    Default export - there is only one default export possible in js file. so only one variable can be exported as default one.
+        Ex - // file name xyz.js
+             const name = "sourav";
+             default export name;
+        we can import this variable in other file using 
+             import name from 'xyz.js'
+
+    Named export - we can have a multiple named export in a js file. 
+        Ex - // filename xyz.js
+             const name = "sourav"
+             export {name}
+        
+        we can import named export variable using - 
+             import {name} from 'xyz.js'
+
+    * as export - we use this type of export to expose all functions and variable in js file. 
+        Ex - // filename xyz.js
+
+                const name = "sourav"
+
+                export function add(a, b) {
+                    return a + b;
+                }
+
+                export function subtract(a, b) {
+                    return a - b;
+                }
+
+                export default function multiply(a, b) {
+                    return a * b;
+                }
+
+                export * as utils from './utils';
+
+        we can import this in other file in this way - 
+
+                import * as utils from './utils';
+
+                const sum = utils.add(1, 2);
+                const difference = utils.subtract(5, 3);
+                const product = utils.multiply(2, 3);
+
+### What is the importance of config.js file.
+    The main purpose of the config.js file is to store static data that is need in over all application.
+
+### What are React Hooks?
+    React Hooks are a new feature introduced in React 16.8 that allow you to use state and other React features without writing a class component.
+
+### Why do we need a useState hooks?
+    This hook lets you declare a state variable and a function to update it. You can use multiple useState hooks in a single component to manage different pieces of state.
