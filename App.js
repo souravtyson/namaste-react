@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM  from "react-dom/client";
-import {data as swiggyRestaurantList} from './mocks/mocky.js'
 import AppLayout from "./components/AppLayout.js";
 
 
