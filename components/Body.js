@@ -6,6 +6,7 @@ import Shimmer from "./Shimmer.js";
 const Body = () => {
 
   const [swiggyRestaurantList, setSwiggyRestaurantList] = useState([]);
+  const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
   const [searchRes, setSearchRes] = useState("")
 
   useEffect(() => {
@@ -17,6 +18,7 @@ const Body = () => {
     const data = await rest.json()
     const swiggyRestaurantList = data?.data?.cards[4]
     setSwiggyRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilteredRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     console.log(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
@@ -27,11 +29,11 @@ const Body = () => {
         <input type="text" id="search" value={searchRes} onChange={(e) => setSearchRes(e.target.value)} />
         <button onClick={() => {
           let x = swiggyRestaurantList.filter(res => res.info.name.toLowerCase().includes(searchRes.toLowerCase()))
-          setSwiggyRestaurantList(x)
+          setFilteredRestaurantList(x)
         }}>Search</button>
         <button
           onClick={() => {
-            setSwiggyRestaurantList(swiggyRestaurantList.filter(res => res.info.avgRating > 4.2))
+            setFilteredRestaurantList(swiggyRestaurantList.filter(res => res.info.avgRating > 4.2))
           }}
         >
           Top Rated Restaurant
@@ -40,7 +42,7 @@ const Body = () => {
 
       <div className="restaurant-list">
         {
-          swiggyRestaurantList.length === 0 ? <Shimmer /> : swiggyRestaurantList.map((restaurant) => (
+          filteredRestaurantList.length === 0 ? <Shimmer /> : filteredRestaurantList.map((restaurant) => (
             <RestaurantCard key={restaurant.info.id} restaurant={restaurant} />
           ))}
       </div>
