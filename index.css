@@ -64,3 +64,9 @@
     cursor: pointer;
     border: 1px solid black;
 }
+
+.login-button {
+    height: 40px;
+    width: 60px;
+    margin: 5px;
+}

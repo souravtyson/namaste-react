@@ -455,3 +455,7 @@ Yes we can use React without ES6. So to make it work we to use React.createEleme
 
 ### Why do we need a useState hooks?
     This hook lets you declare a state variable and a function to update it. You can use multiple useState hooks in a single component to manage different pieces of state.
+
+## Episode 6
+
+###
