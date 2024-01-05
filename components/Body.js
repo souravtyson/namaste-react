@@ -16,7 +16,7 @@ const Body = () => {
   const fetchRestaurantData = async () => {
     const rest = await fetch(SWIGGY_RESTAURANT_API);
     const data = await rest.json()
-    const swiggyRestaurantList = data?.data?.cards[4]
+    const swiggyRestaurantList = data?.data?.cards[5]
     setSwiggyRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     console.log(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
