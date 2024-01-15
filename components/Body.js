@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { SWIGGY_RESTAURANT_API } from "../utils/constants.js"
 import RestaurantCard from "./RestaurantCard.js";
 import Shimmer from "./Shimmer.js";
+import { Link } from "react-router-dom";
 
 const Body = () => {
 
@@ -16,10 +17,9 @@ const Body = () => {
   const fetchRestaurantData = async () => {
     const rest = await fetch(SWIGGY_RESTAURANT_API);
     const data = await rest.json()
-    const swiggyRestaurantList = data?.data?.cards[5]
+    const swiggyRestaurantList = data?.data?.cards[4]
     setSwiggyRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
-    console.log(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
   return (
@@ -43,7 +43,7 @@ const Body = () => {
       <div className="restaurant-list">
         {
           filteredRestaurantList.length === 0 ? <Shimmer /> : filteredRestaurantList.map((restaurant) => (
-            <RestaurantCard key={restaurant.info.id} restaurant={restaurant} />
+            <Link key={restaurant.info.id} to={`/restaurant/${restaurant.info.id}`}><RestaurantCard restaurant={restaurant} /></Link>
           ))}
       </div>
     </div>

@@ -6,6 +6,7 @@ import About from "./components/About.js";
 import Contact from "./components/Contact.js";
 import Error from "./components/Error.js";
 import Body from "./components/Body.js";
+import RestaurantMenu from "./components/RestaurantMenu.js";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/restaurant/:resID",
+                element: <RestaurantMenu />
             }
         ],
         errorElement: <Error />
