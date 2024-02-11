@@ -458,4 +458,72 @@ Yes we can use React without ES6. So to make it work we to use React.createEleme
 
 ## Episode 6
 
-###
+### What is a microservice?
+    Microservice is an architectural approach of developing software applications. In this and application is broken down into small, independent services that communicate with each other over a network.
+
+### What is  monolith architecture?
+    Monolithic is an old architectural approach where one application acts and serves all your requests. In this all the functionality is tightly integrated into a single codebase.
+
+### What is the difference between monolith and microservice?
+    Microservices architecture decomposes large applications into smaller, self-contained modules. In monolithic architecture, application have all functionality tightly integrated into a single codebase.
+
+### Why do we need a useEffect Hook?
+    useEffect hook is used to act based on side effects happening in react functional component. So if components renders because of any reason like change in state variable or props change, useEffect hooks run. We use it to implement three types of lifecycle method of component i.e. componentDidUpdate, componentDidMount, componentWillUnmount.
+
+### What is optional chaining?
+    optional chaining is a new feature introduced in es2020. we represent this operator using ` .? ` symbol. operator allows safe access to nested properties without explicit null checks.
+
+### compare is ES6 vs ES2020?
+    * ES6 introduced fundamental changes, while ES2020 focuses on refining existing patterns and addressing common pain points.
+    * Developers often use a combination of both versions, leveraging ES6 features alongside the latest enhancements from ES2020.
+
+### What is shimmer ui?
+    A shimmer UI is used to enhance the user experience during loading states in web or mobile applications. Let's dive into the details. It doesn’t display actual content but instead mimics the layout and shapes of the content that will eventually appear.
+
+### What is the difference between JS expression and JS statement
+    function statement in js -
+        * hoisted during the compilation phase, meaning it’s available throughout the entire scope
+        * function myFunction() {
+            // Function logic here
+          }
+    
+    function expression in js - 
+        * It assigns a function to a variable or a property of an object
+        * It is evaluated at runtime when the code execution reaches that line.
+        * Function expressions are often used for callbacks, IIFE (Immediately Invoked Function Expressions), and creating closures.
+        * const myFunction = function() {
+            // Function logic here
+          };
+
+
+
+### What is conditional rendering, explain with a code example?
+    Conditional rendering in React allows you to selectively display different parts of your user interface based on certain conditions. 
+    
+    Ex. - <h2>{id.includes("1") ? "$$$" : ""} {id}</h2> , 
+        The above code displays $$$ if id includes the character "1"; otherwise, it shows the value of id
+
+### What is CORS?
+    Cross-Origin Resource Sharing (CORS) is a mechanism that allows restricted resources on a web page to be accessed from another domain outside the domain from which the first resource was served.
+
+    How CORS Works:
+        * When a web page makes a request to a different domain (cross-origin request), the browser checks if the target domain explicitly allows it.
+        * The server hosting the resource can include an HTTP header called Access-Control-Allow-Origin.
+        * This header specifies which origins (domains) are allowed to access the resource.
+        * If the requesting domain matches the allowed origin, the browser permits loading the resourc
+
+
+### What is async and await?
+    * Use async/await when dealing with asynchronous operations like API calls, database queries, or file I/O
+    * Avoid using it in top-level code (outside functions) since it requires an async context
+### What is the use of `const json = await data.json():` in getRestaurants()
+    By using await, you pause the execution of your code until the promise returned by data.json() settles (i.e., resolves or rejects). When the promise resolves, the actual JSON data is available. The await expression evaluates to the resolved value (in this case, the parsed JSON data).
+    
+
+## Episode 7
+
+### What are various ways to add images into our App? Explain with code examples
+### What would happen if we do console.log(useState())?
+### How will useEffect behave if we don't add a dependency array?
+### What is SPA?
+### What is difference between client side routing and server side routing?
