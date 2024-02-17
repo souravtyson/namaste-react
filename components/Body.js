@@ -9,9 +9,8 @@ const Body = () => {
   const [swiggyRestaurantList, setSwiggyRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([])
   const [searchRes, setSearchRes] = useState("")
-  const location = {
-    "lat":12.9254199,"lng":77.59184900000001
-  }
+  const [location, setLocation] = useState({"lat":12.9254199,"lng":77.59184900000001})
+  
 
   const handleScroll = () => {
     // Get the scroll position and the window height
@@ -31,25 +30,46 @@ const Body = () => {
     } 
   }
 
+  const getCurrentGeoLocation = () => {
+    if(navigator.geolocation) {
+      const successFn = (position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        })
+        // console.log(position.coords.latitude)
+        // console.log(position.coords.longitude)
+      }
+      const errorFn = (error) => {
+        // run this block of code when user clicks on block
+        console.log('error')
+        console.log(error)
+      }
+      navigator.geolocation.getCurrentPosition(successFn, errorFn)
+    } else {
+      console.log('geolocation is not available in the browser')
+    }
+  }
 
   useEffect(() => {
+    getCurrentGeoLocation()
     fetchRestaurantData()
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     }
-  }, [])
+  }, [location.lat, location.lng])
 
 
   let updateRequest = {}
 
   const fetchRestaurantData = async () => {
-    const rest = await fetch(SWIGGY_RESTAURANT_API);
+    const rest = await fetch(SWIGGY_RESTAURANT_API.replace('LATITUDE', location.lat).replace('LONGITUDE', location.lng));
     const data = await rest.json()
     const swiggyRestaurantList = data?.data?.cards[4]
     updateRequest = {...data?.data?.pageOffset, ...location, _csrf: data?.csrfToken, seoUrl: data?.data?.cards[11]?.card?.card.seoParams}
     console.log(updateRequest)
-    fetchUpdatedRestaurant()
+    // fetchUpdatedRestaurant()
     setSwiggyRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setFilteredRestaurantList(swiggyRestaurantList?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
