@@ -30,6 +30,13 @@ const Body = () => {
     } 
   }
 
+  // const test = async () => {
+  //   return new Promise((resolve, reject) => {
+  //     navigator.geolocation.getCurrentPosition((position) => resolve(position), (error) => reject(error))
+  //   })
+  // }
+
+
   const getCurrentGeoLocation = () => {
     if(navigator.geolocation) {
       const successFn = (position) => {
@@ -45,7 +52,10 @@ const Body = () => {
         console.log('error')
         console.log(error)
       }
-      navigator.geolocation.getCurrentPosition(successFn, errorFn)
+      navigator.geolocation.getCurrentPosition(successFn, errorFn, {
+        enableHighAccuracy: true,
+        maximumAge: 20000
+      })
     } else {
       console.log('geolocation is not available in the browser')
     }
