@@ -523,7 +523,47 @@ Yes we can use React without ES6. So to make it work we to use React.createEleme
 ## Episode 7
 
 ### What are various ways to add images into our App? Explain with code examples
+
+    There can be multiple ways for example - 
+    * Importing image in component via img tag
+
+        import {IMAGE} from './src/hello.jpg'
+
+        const Hello = () => {
+            return (
+                <div>
+                <img src={IMAGE} alt={'my image'}/>
+                </div>
+            )
+        }
+
+        export default Hello
+
+    * Importing images using css
+
+        .image-container {
+            background-image: url('./src/hello.jpg');
+            backgroun-size: cover;
+            width: 100px;
+            height: 100px
+        }
+
+
 ### What would happen if we do console.log(useState())?
+    it will print array with two elements in it. first element will be the initialized value and the second element will be the function that can be used to set the value of the variable. Example - 
+            console.log(useState(""))
+            o/p - ['', function()]
+
 ### How will useEffect behave if we don't add a dependency array?
+    useEffect runs based on side effects. so useEffect will act as componentDidMount and componentDidUpdate. useEffect without dependency array will make it run everytime component renders. on mounting of the component or due to any update in the component
 ### What is SPA?
+    SPA is a single page application where you will not see page getting refreshed out or a loader icon in the browser. The page in SPA will be responsive for the user. 
 ### What is difference between client side routing and server side routing?
+    client-side routing changes the URL in the address bar without reloading the browser, while server-side routing typically involves page reloads and serving content from the server
+
+    * client side routing 
+        - In client-side routing, navigation within the web application is handled by the browser without requiring the server to fetch new HTML documents. When a user clicks on a link or interacts with the application's UI, JavaScript code running in the browser updates the URL in the address bar and manipulates the DOM (Document Object Model) to display the appropriate content without reloading the entire page.
+
+    * server side routing 
+        - In server-side routing, navigation triggers requests to the server, which responds by serving new HTML documents corresponding to the requested URLs
+        - When a user navigates to a different page or resource, the browser sends a request to the server, which processes the request and returns the appropriate HTML content.
