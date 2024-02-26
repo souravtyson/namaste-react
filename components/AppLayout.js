@@ -4,12 +4,12 @@ import { Outlet } from "react-router-dom"
 
 const AppLayout = () => {
     return (
-        <StrictMode>
+        // <StrictMode>
         <div className="app">
             <Header />
             <Outlet />
         </div>
-        </StrictMode>
+        // </StrictMode>
     )
 }
 

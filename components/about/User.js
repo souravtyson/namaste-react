@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 const User = ({ name, location, contact }) => {
+
+  console.log('inside: functional component')
+
   const [count, setCount] = useState(0);
 
   return (

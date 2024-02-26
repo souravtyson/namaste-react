@@ -8,11 +8,19 @@ class UserClass extends React.Component {
       count: 1,
       count2: 90,
     };
+    console.log('inside: class component constructor')
   }
+
+  componentDidMount() {
+    console.log('inside: class component componentDidMount');
+  }
+
   render() {
+    console.log('inside: class component render')
+  
     const { name, location, contact } = this.props;
     const { count } = this.state;
-    console.log(this.state);
+    // console.log(this.state); 
     return (
       <div className="user-details">
         <h4>Count - {count}</h4>
