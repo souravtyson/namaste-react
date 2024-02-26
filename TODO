@@ -1,0 +1,4 @@
+* why do we use super(props) in class based components
+* call the update api of swiggy to load new restaurant when scrolled in browser
+* create a login page using formik library
+* Proto buf and it's compilation with grpc
